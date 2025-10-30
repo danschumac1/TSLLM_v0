@@ -1,6 +1,6 @@
 # DO IT ALL TIME SERIES
 
-## Get data
+## 1. Get data
 
 ### Classification Datasets
 
@@ -36,3 +36,7 @@
 - Open: https://www.timeseriesclassification.com/description.php?Dataset=Lightning7  
 - Download the dataset archive (zip).
 - Extract and put contents into `./raw_data/tee/`
+
+## 2. Clean/preprocess the data
+- chmod +x ./bin/clean_all_data.sh
+- ./bin/clean_all_data.sh
