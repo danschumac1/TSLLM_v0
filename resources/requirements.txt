@@ -1,0 +1,25 @@
+datasets
+pydantic
+dotenv
+json_repair
+openai==1.58.1
+accelerate==1.6.0
+bitsandbytes==0.45.5
+transformers==4.51.3
+torch==2.6.0
+torchvision==0.21.0
+torchaudio==2.6.0
+tqdm
+json-repair
+PyYAML
+protobuf
+sentencepiece
+soundfile
+matplotlib
+sktime
+statsmodels
+MissForest
+lightgbm
+# remember to run
+# hf auth login
+# export PYTHONPATH=$(pwd)
