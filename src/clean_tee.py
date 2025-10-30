@@ -42,7 +42,7 @@ import numpy as np
 # CONFIG
 # ---------------------------------------------------------------------
 BASE_PATH  = "raw_data/tee"
-OUT_DIR    = "Classification/tee"
+OUT_DIR    = "Classification/data/tee"
 SERIES_LEN = 319  # expected time series length
 DTYPE_X    = np.float32
 DTYPE_Y    = np.int64
