@@ -1,0 +1,8 @@
+# IGNORE THESE FILES
+.env
+.zip
+# IGNORE EVERYTHING IN THESE FOLDERS BUT KEEP THE FOLDERS
+raw_data/*
+logs/*
+!logs/.gitkeep
+!raw_data/gitkeep
