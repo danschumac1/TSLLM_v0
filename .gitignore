@@ -3,7 +3,9 @@
 .zip
 # IGNORE EVERYTHING IN THESE FOLDERS BUT KEEP THE FOLDERS
 raw_data/*
+!raw_data/.gitkeep
+!raw_data/.README.md
+
 logs/*
 !logs/.gitkeep
-!raw_data/gitkeep
 *data/
