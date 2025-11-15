@@ -1,0 +1,24 @@
+
+========================================
+Master Log Session at 2025-11-15 14:10:14
+========================================
+[INFO] Clearing output file ./Classification/data/sample_generations/tee/text-only-prompting/line/norm/ts/0-shot_random_per_class_text-only_line_norm_ts.jsonl || 2025-11-15 14:10:14
+[INFO] Loaded dataset: None || 2025-11-15 14:10:14
+[INFO] Train size=70, Test size=73 || 2025-11-15 14:10:14
+[INFO] Output file: ./Classification/data/sample_generations/tee/text-only-prompting/line/norm/ts/0-shot_random_per_class_text-only_line_norm_ts.jsonl || 2025-11-15 14:10:14
+[INFO] Using 0 few-shot examples per test item. || 2025-11-15 14:10:14
+[INFO] Model = gpt-4o-mini || 2025-11-15 14:10:14
+[INFO] Batch rows: 0 → 2 || 2025-11-15 14:10:14
+[INFO] Saved prompt markdown to: ./Classification/data/sample_generations/tee/text-only-prompting/line/norm/ts/prompt_examples/0-shot_random_per_class_text-only_line_norm_ts.md || 2025-11-15 14:10:14
+[INFO] Current accuracy at idx 1:			0.00% || 2025-11-15 14:10:15
+[INFO] Batch rows: 2 → 4 || 2025-11-15 14:10:15
+[INFO] Current accuracy at idx 3:			0.00% || 2025-11-15 14:10:16
+[INFO] Batch rows: 4 → 6 || 2025-11-15 14:10:16
+[INFO] Current accuracy at idx 5:			0.00% || 2025-11-15 14:10:16
+[INFO] Batch rows: 6 → 8 || 2025-11-15 14:10:16
+[INFO] Current accuracy at idx 7:			0.00% || 2025-11-15 14:10:17
+[INFO] Batch rows: 8 → 10 || 2025-11-15 14:10:17
+[INFO] Current accuracy at idx 9:			0.00% || 2025-11-15 14:10:28
+[INFO] Batch rows: 10 → 12 || 2025-11-15 14:10:28
+[INFO] Current accuracy at idx 11:			0.00% || 2025-11-15 14:10:29
+[INFO] Batch rows: 12 → 14 || 2025-11-15 14:10:29

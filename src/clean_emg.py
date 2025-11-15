@@ -36,19 +36,17 @@ Windowing policy
 Outputs
 -------
 OUT_DIR/
-  train/
-    X.npy : float32, shape (N_train, 1500)
-    y.npy : int64,   shape (N_train,)
-  test/
-    X.npy : float32, shape (N_test, 1500)
-    y.npy : int64,   shape (N_test,)
+    X_train.npy : float32, shape (N_train, 1, 1500)
+    y_train.npy : int64,   shape (N_train,)
+    X_test.npy  : float32, shape (N_test, 1, 1500)
+    y_test.npy  : int64,   shape (N_test,)
+
 
 Run
 ---
 python ./src/clean_emg.py
 """
 
-import sys; sys.path.append("./src/")  # for utils/
 import os
 from typing import Dict, List, Tuple
 
@@ -56,7 +54,8 @@ import numpy as np
 
 # ----------------------------- CONFIG --------------------------------
 RAW_DIR     = "./raw_data/emg"
-OUT_DIR     = "Classification/data/emg"
+OUT_DIR     = "Classification/data/datasets/emg"
+SAMP_DIR    = "./Classification/data/samples/emg/"
 WINDOW_SIZE = 1500                   # samples per window
 STRIDE      = 1500                   # non-overlapping
 DTYPE       = np.float32
@@ -153,6 +152,17 @@ def sliding_windows_1d(x: np.ndarray, window_size: int, stride: int) -> np.ndarr
         out[i] = x[start : start + window_size]
     return out
 
+def to_nyz(X: np.ndarray) -> np.ndarray:
+    """Force (N, Y, Z). If (N, Z) -> (N, 1, Z)."""
+    X = np.asarray(X)
+    if X.ndim == 2:
+        N, Z = X.shape
+        return X.reshape(N, 1, Z)
+    if X.ndim == 3:
+        return X
+    raise ValueError(f"Expected 2D or 3D, got {X.shape}")
+
+
 # ------------------------------- MAIN --------------------------------
 def main():
     os.makedirs(OUT_DIR, exist_ok=True)
@@ -182,23 +192,42 @@ def main():
     train_idx, test_idx = stratified_train_test_split(y_all, train_frac=TRAIN_FRAC, seed=SEED)
     X_train, y_train = X_all[train_idx], y_all[train_idx]
     X_test,  y_test  = X_all[test_idx],  y_all[test_idx]
+    X_train = to_nyz(X_train)
+    X_test  = to_nyz(X_test)
+
 
 
     # Sanity checks & summary
-    assert X_train.shape[1] == WINDOW_SIZE and X_test.shape[1] == WINDOW_SIZE, "Series length mismatch!"
+    assert X_train.ndim == 3 and X_test.ndim == 3, "Expect 3D (N,Y,Z) arrays"
+    assert X_train.shape[1] == 1 and X_test.shape[1] == 1, "EMG should be univariate (Y=1)"
+    assert X_train.shape[2] == WINDOW_SIZE and X_test.shape[2] == WINDOW_SIZE, "Series length mismatch!"
+    
     def dist(y: np.ndarray) -> dict:
         u, c = np.unique(y, return_counts=True)
         return dict(zip(u.tolist(), c.tolist()))
+
     print("  Train:", X_train.shape, "| label dist:", dist(y_train))
     print("  Test: ", X_test.shape,  "| label dist:", dist(y_test))
-    print(f"  Total: {X_all.shape[0]} (expect ≈205 if using the same raw sources)\n")
+    print(f"  Total: {X_train.shape[0] + X_test.shape[0]} (expect ≈205 if using the same raw sources)\n")
 
 
         # Save to disk using project helper (writes X.npy/y.npy under subfolders)
-    np.save(os.path.join(OUT_DIR, "X_train.npy"), X_train)
-    np.save(os.path.join(OUT_DIR, "y_train.npy"), y_train)
-    np.save(os.path.join(OUT_DIR, "X_test.npy"),  X_test)
-    np.save(os.path.join(OUT_DIR, "y_test.npy"),  y_test)
+    os.makedirs(OUT_DIR, exist_ok=True)
+    np.save(os.path.join(OUT_DIR, "X_train.npy"), X_train.astype(np.float32, copy=False))
+    np.save(os.path.join(OUT_DIR, "y_train.npy"), y_train.astype(np.int64,   copy=False))
+    np.save(os.path.join(OUT_DIR, "X_test.npy"),  X_test.astype(np.float32,  copy=False))
+    np.save(os.path.join(OUT_DIR, "y_test.npy"),  y_test.astype(np.int64,    copy=False))
+
+    os.makedirs(SAMP_DIR, exist_ok=True)
+    # sample
+    X_tr_samp = np.random.permutation(X_train)[:500]
+    y_tr_samp = np.random.permutation(y_train)[:500]
+    X_te_samp = np.random.permutation(X_test)[:100]
+    y_te_samp = np.random.permutation(y_test)[:100]
+    np.save(os.path.join(SAMP_DIR, "X_train.npy"), X_tr_samp.astype(np.float32, copy=False))
+    np.save(os.path.join(SAMP_DIR, "X_test.npy"),  X_te_samp.astype(np.float32, copy=False))   
+    np.save(os.path.join(SAMP_DIR, "y_train.npy"), y_tr_samp.astype(np.int64, copy=False))
+    np.save(os.path.join(SAMP_DIR, "y_test.npy"),  y_te_samp.astype(np.int64, copy=False))
     print(f"\nSAVED FILES SUCCESSSFULLY  |  {OUT_DIR}")
 
 

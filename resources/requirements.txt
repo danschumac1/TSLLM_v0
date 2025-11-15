@@ -6,9 +6,9 @@ openai==1.58.1
 accelerate==1.6.0
 bitsandbytes==0.45.5
 transformers==4.51.3
-torch==2.6.0
-torchvision==0.21.0
-torchaudio==2.6.0
+torch
+torchvision
+torchaudio
 tqdm
 json-repair
 PyYAML

@@ -1,0 +1,83 @@
+
+========================================
+Master Log Session at 2025-11-15 14:37:19
+========================================
+[INFO] Clearing output file ./Classification/data/sample_generations/tee/text-only_prompting/normalized/rpc.jsonl || 2025-11-15 14:37:19
+[INFO] Using 0 few-shot examples per test item. || 2025-11-15 14:37:19
+[INFO] Model = gpt-4o-mini || 2025-11-15 14:37:19
+[INFO] Batch rows: 0 → 2 || 2025-11-15 14:37:19
+[INFO] Saved prompt markdown to: ./Classification/data/sample_generations/tee/text-only_prompting/normalized/prompt_examples/rpc.md || 2025-11-15 14:37:19
+[INFO] Current accuracy at idx 1:			0.00% || 2025-11-15 14:37:22
+[INFO] Batch rows: 2 → 4 || 2025-11-15 14:37:22
+[INFO] Current accuracy at idx 3:			0.00% || 2025-11-15 14:37:23
+[INFO] Batch rows: 4 → 6 || 2025-11-15 14:37:23
+[INFO] Current accuracy at idx 5:			0.00% || 2025-11-15 14:37:35
+[INFO] Batch rows: 6 → 8 || 2025-11-15 14:37:35
+[INFO] Current accuracy at idx 7:			0.00% || 2025-11-15 14:37:36
+[INFO] Batch rows: 8 → 10 || 2025-11-15 14:37:36
+[INFO] Current accuracy at idx 9:			0.00% || 2025-11-15 14:37:46
+[INFO] Batch rows: 10 → 12 || 2025-11-15 14:37:46
+[INFO] Current accuracy at idx 11:			0.00% || 2025-11-15 14:37:48
+[INFO] Batch rows: 12 → 14 || 2025-11-15 14:37:48
+[INFO] Current accuracy at idx 13:			7.14% || 2025-11-15 14:37:49
+[INFO] Batch rows: 14 → 16 || 2025-11-15 14:37:49
+[INFO] Current accuracy at idx 15:			6.25% || 2025-11-15 14:37:50
+[INFO] Batch rows: 16 → 18 || 2025-11-15 14:37:50
+[INFO] Current accuracy at idx 17:			16.67% || 2025-11-15 14:37:51
+[INFO] Batch rows: 18 → 20 || 2025-11-15 14:37:51
+[INFO] Current accuracy at idx 19:			20.00% || 2025-11-15 14:37:52
+[INFO] Batch rows: 20 → 22 || 2025-11-15 14:37:52
+[INFO] Current accuracy at idx 21:			18.18% || 2025-11-15 14:37:53
+[INFO] Batch rows: 22 → 24 || 2025-11-15 14:37:53
+[INFO] Current accuracy at idx 23:			16.67% || 2025-11-15 14:37:54
+[INFO] Batch rows: 24 → 26 || 2025-11-15 14:37:54
+[INFO] Current accuracy at idx 25:			15.38% || 2025-11-15 14:38:03
+[INFO] Batch rows: 26 → 28 || 2025-11-15 14:38:03
+[INFO] Current accuracy at idx 27:			14.29% || 2025-11-15 14:38:04
+[INFO] Batch rows: 28 → 30 || 2025-11-15 14:38:04
+[INFO] Current accuracy at idx 29:			13.33% || 2025-11-15 14:38:14
+[INFO] Batch rows: 30 → 32 || 2025-11-15 14:38:14
+[INFO] Current accuracy at idx 31:			12.50% || 2025-11-15 14:38:15
+[INFO] Batch rows: 32 → 34 || 2025-11-15 14:38:15
+[INFO] Current accuracy at idx 33:			11.76% || 2025-11-15 14:38:24
+[INFO] Batch rows: 34 → 36 || 2025-11-15 14:38:24
+[INFO] Current accuracy at idx 35:			13.89% || 2025-11-15 14:38:25
+[INFO] Batch rows: 36 → 38 || 2025-11-15 14:38:25
+[INFO] Current accuracy at idx 37:			13.16% || 2025-11-15 14:38:26
+[INFO] Batch rows: 38 → 40 || 2025-11-15 14:38:26
+[INFO] Current accuracy at idx 39:			15.00% || 2025-11-15 14:38:35
+[INFO] Batch rows: 40 → 42 || 2025-11-15 14:38:35
+[INFO] Current accuracy at idx 41:			14.29% || 2025-11-15 14:38:37
+[INFO] Batch rows: 42 → 44 || 2025-11-15 14:38:37
+[INFO] Current accuracy at idx 43:			13.64% || 2025-11-15 14:38:38
+[INFO] Batch rows: 44 → 46 || 2025-11-15 14:38:38
+[INFO] Current accuracy at idx 45:			15.22% || 2025-11-15 14:38:47
+[INFO] Batch rows: 46 → 48 || 2025-11-15 14:38:47
+[INFO] Current accuracy at idx 47:			14.58% || 2025-11-15 14:38:48
+[INFO] Batch rows: 48 → 50 || 2025-11-15 14:38:48
+[INFO] Current accuracy at idx 49:			16.00% || 2025-11-15 14:38:49
+[INFO] Batch rows: 50 → 52 || 2025-11-15 14:38:49
+[INFO] Current accuracy at idx 51:			15.38% || 2025-11-15 14:38:50
+[INFO] Batch rows: 52 → 54 || 2025-11-15 14:38:50
+[INFO] Current accuracy at idx 53:			18.52% || 2025-11-15 14:38:51
+[INFO] Batch rows: 54 → 56 || 2025-11-15 14:38:51
+[INFO] Current accuracy at idx 55:			21.43% || 2025-11-15 14:38:52
+[INFO] Batch rows: 56 → 58 || 2025-11-15 14:38:52
+[INFO] Current accuracy at idx 57:			22.41% || 2025-11-15 14:39:00
+[INFO] Batch rows: 58 → 60 || 2025-11-15 14:39:00
+[INFO] Current accuracy at idx 59:			21.67% || 2025-11-15 14:39:01
+[INFO] Batch rows: 60 → 62 || 2025-11-15 14:39:01
+[INFO] Current accuracy at idx 61:			22.58% || 2025-11-15 14:39:03
+[INFO] Batch rows: 62 → 64 || 2025-11-15 14:39:03
+[INFO] Current accuracy at idx 63:			21.88% || 2025-11-15 14:39:09
+[INFO] Batch rows: 64 → 66 || 2025-11-15 14:39:09
+[INFO] Current accuracy at idx 65:			21.21% || 2025-11-15 14:39:09
+[INFO] Batch rows: 66 → 68 || 2025-11-15 14:39:09
+[INFO] Current accuracy at idx 67:			22.06% || 2025-11-15 14:39:18
+[INFO] Batch rows: 68 → 70 || 2025-11-15 14:39:18
+[INFO] Current accuracy at idx 69:			21.43% || 2025-11-15 14:39:28
+[INFO] Batch rows: 70 → 72 || 2025-11-15 14:39:28
+[INFO] Current accuracy at idx 71:			20.83% || 2025-11-15 14:39:29
+[INFO] Batch rows: 72 → 73 || 2025-11-15 14:39:29
+[INFO] Current accuracy at idx 72:			21.92% || 2025-11-15 14:39:38
+[INFO] ✅ Finished. Results saved → ./Classification/data/sample_generations/tee/text-only_prompting/normalized/rpc.jsonl || 2025-11-15 14:39:38

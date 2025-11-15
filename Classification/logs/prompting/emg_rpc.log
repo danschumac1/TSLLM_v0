@@ -1,0 +1,829 @@
+
+========================================
+Master Log Session at 2025-11-13 17:47:48
+========================================
+[INFO] Clearing output file ./Classification/data/sample_generations/emg/text-only-prompting/spectrogram/norm/ts/0-shot_random_per_class_text-only_spectrogram_norm_ts.jsonl || 2025-11-13 17:47:48
+[INFO] Loaded dataset: None || 2025-11-13 17:47:48
+[INFO] Train size=267, Test size=47 || 2025-11-13 17:47:48
+[INFO] Output file: ./Classification/data/sample_generations/emg/text-only-prompting/spectrogram/norm/ts/0-shot_random_per_class_text-only_spectrogram_norm_ts.jsonl || 2025-11-13 17:47:48
+[INFO] Using 0 few-shot examples per test item. || 2025-11-13 17:47:48
+[INFO] Model = gpt-4o-mini || 2025-11-13 17:47:48
+[INFO] Batch rows: 0 → 25 || 2025-11-13 17:47:48
+[INFO] Saved prompt markdown to: ./Classification/data/sample_generations/emg/text-only-prompting/spectrogram/norm/ts/prompt_examples/0-shot_random_per_class_text-only_spectrogram_norm_ts.md || 2025-11-13 17:47:48
+[INFO] Line 0: False	 | To determine the subject type based on the provided EMG time series, we need to analyze the characteristics of the signal. 
+
+1. **Signal Amplitude**: The values in the time series fluctuate between negative and positive values, indicating muscle activity. However, there are significant negative peaks, which could suggest muscle dysfunction.
+
+2. **Trends and Patterns**: The time series shows a mix of low and high values, with some sections indicating significant muscle activation (positive values) and others showing considerable inactivity or dysfunction (negative values). The presence of large negative values, such as -4.528841495513916, suggests potential muscle damage or neuropathy.
+
+3. **Comparative Analysis**: 
+   - **Healthy (normal)** subjects typically show consistent and moderate amplitude values without extreme fluctuations.
+   - **Myopathy** is characterized by muscle weakness and may show some irregularities in the EMG signal, but not as extreme as seen here.
+   - **Neuropathy** often presents with significant negative values and irregular firing patterns, which aligns with the observed data.
+
+4. **Conclusion**: Given the presence of extreme negative values and the overall pattern of the EMG signal, it is indicative of neuropathy rather than a healthy or myopathic condition.
+
+Thus, based on the analysis of the EMG time series, the subject type is most likely:
+
+The answer is [C] || 2025-11-13 17:48:11
+[INFO] Line 1: False	 | To determine the subject type based on the provided EMG time series, we need to analyze the characteristics of the signal. 
+
+1. **Signal Amplitude**: The values in the time series show a range of positive and negative values, indicating muscle activity. The presence of both high and low values suggests variability in muscle activation.
+
+2. **Trends and Patterns**: The time series shows fluctuations with both positive and negative peaks. The presence of negative values indicates potential muscle fatigue or dysfunction, which is often seen in myopathy or neuropathy.
+
+3. **Signal Characteristics**: The time series has a significant number of low values interspersed with higher peaks. This could indicate a pattern of muscle activation that is not typical for healthy individuals, who would generally show more consistent activation levels.
+
+4. **Comparison with Subject Types**:
+   - **Healthy (normal)**: Typically shows consistent and stable EMG signals with less variability.
+   - **Myopathy**: Often presents with reduced amplitude and increased variability due to muscle fiber damage.
+   - **Neuropathy**: Can show irregular patterns and fluctuations in signal amplitude, often with both high and low values due to nerve damage affecting muscle activation.
+
+Given the characteristics of the provided EMG time series, the presence of significant fluctuations, negative values, and the overall pattern suggests that the subject is likely experiencing some form of muscle dysfunction.
+
+Based on this analysis, the most fitting classification for the subject type is [B] Myopathy, as the signal characteristics align more closely with muscle-related issues rather than purely nerve-related issues.
+
+The answer is [B] || 2025-11-13 17:48:11
+[INFO] Line 2: False	 | To determine the subject type based on the provided EMG time series, we need to analyze the characteristics of the signal. 
+
+1. **Signal Amplitude**: The values in the time series fluctuate between positive and negative values, indicating muscle activity. The amplitude appears to be relatively low, which could suggest a lack of strong muscle activation.
+
+2. **Trends and Patterns**: The time series shows a pattern of small fluctuations with some negative values, which may indicate muscle fatigue or a lack of proper muscle function. The presence of negative values suggests that there may be issues with muscle recruitment or nerve signaling.
+
+3. **Comparative Analysis**: 
+   - **Healthy (normal)**: Typically, a healthy EMG signal would show higher amplitudes and more consistent positive values during muscle activation.
+   - **Myopathy**: This condition often presents with reduced amplitude and may show more irregular patterns due to muscle fiber damage.
+   - **Neuropathy**: This condition can lead to abnormal EMG readings, including reduced amplitude and increased variability in the signal due to nerve damage.
+
+Given the characteristics of the provided EMG time series, the low amplitude and presence of negative values suggest that the subject may have a neuromuscular condition. The fluctuations and the overall pattern do not align with a healthy muscle function, nor do they indicate typical myopathy patterns.
+
+Based on this analysis, the most fitting classification for the subject type is:
+
+The answer is [C] || 2025-11-13 17:48:11
+[INFO] Line 3: False	 | To determine the subject type based on the provided EMG time series data, we need to analyze the characteristics of the signal. 
+
+1. **Signal Amplitude**: The values in the time series range from negative to positive, indicating fluctuations in muscle activity. The presence of both positive and negative values suggests that there is some level of muscle activation and relaxation.
+
+2. **Mean and Variance**: The mean of the signal appears to be relatively low, with many values hovering around zero, which could indicate a lack of significant muscle activation. The variance would need to be calculated to assess the spread of the signal, but the presence of many small fluctuations suggests a potential for muscle fatigue or weakness.
+
+3. **Patterns of Activation**: The time series shows a pattern of small peaks and troughs, which may indicate a lack of robust muscle contractions. The presence of negative values and the overall low amplitude suggest that the muscle activity is not strong.
+
+4. **Comparison with Subject Types**:
+   - **Healthy (normal)**: Typically, a healthy EMG would show clear, strong muscle activation patterns with higher amplitudes and less noise.
+   - **Myopathy**: This condition often presents with reduced amplitude and increased variability in the EMG signal due to muscle fiber damage or dysfunction.
+   - **Neuropathy**: This condition can show a variety of patterns, but often includes signs of denervation or reinnervation, which may not be as evident in this time series.
+
+Given the characteristics of the provided EMG time series, the low amplitude and the presence of negative values suggest that the subject may have some form of muscle dysfunction. The patterns observed are more consistent with myopathy, where muscle fibers are not functioning optimally, leading to reduced signal strength.
+
+Therefore, based on the analysis of the EMG time series, the most appropriate classification for the subject type is:
+
+The answer is [B] || 2025-11-13 17:48:11
+[INFO] Line 4: False	 | To determine the subject type based on the provided EMG time series, we need to analyze the characteristics of the signal. 
+
+1. **Signal Amplitude**: The values in the time series fluctuate between positive and negative values, indicating muscle activity. The amplitude appears to be relatively low, which could suggest a less active muscle or a potential issue.
+
+2. **Patterns of Activity**: The time series shows a pattern of alternating positive and negative values, with some peaks and troughs. This could indicate a muscle that is not functioning normally, as healthy muscle activity typically shows more consistent and higher amplitude signals during contraction.
+
+3. **Negative Values**: The presence of significant negative values, especially those that drop below -1, suggests that there may be a problem with muscle activation or nerve conduction. In healthy individuals, we would expect to see more consistent positive values during muscle activation.
+
+4. **Overall Trends**: The overall trend of the signal shows a lot of fluctuation with some periods of low activity (indicated by the negative values). This could be indicative of a neuromuscular disorder, such as neuropathy, where the nerve signals to the muscle are impaired.
+
+Based on these observations, the EMG time series suggests that the subject may have a neuromuscular condition rather than being healthy or having myopathy. 
+
+Thus, the most appropriate classification for this subject type based on the EMG time series is:
+
+The answer is [C] || 2025-11-13 17:48:11
+[INFO] Line 5: False	 | To determine the subject type based on the provided EMG time series, we need to analyze the characteristics of the signal. 
+
+1. **Signal Amplitude**: The time series shows a range of values, including both negative and positive peaks. The presence of negative values suggests that there may be some level of muscle dysfunction or abnormality.
+
+2. **Trends and Patterns**: The signal exhibits fluctuations with both high and low values, indicating variability in muscle activation. The presence of significant negative peaks (e.g., -1.0588657855987549, -1.3695924282073975) suggests potential muscle weakness or dysfunction.
+
+3. **Overall Activity Level**: The overall activity level appears to be lower than what would be expected in a healthy individual, as indicated by the frequent negative values and the lack of sustained high positive values.
+
+4. **Comparison with Subject Types**:
+   - **Healthy (normal)**: Would typically show consistent positive values with less variability and fewer negative peaks.
+   - **Myopathy**: Characterized by muscle weakness and may show abnormal EMG patterns, including reduced amplitude and increased variability.
+   - **Neuropathy**: Often presents with irregular firing patterns and can show both high and low amplitude signals, but typically with more pronounced abnormalities.
+
+Given the significant negative values and the overall pattern of the EMG signal, it is more indicative of a myopathic condition rather than a healthy or neuropathic condition.
+
+Therefore, based on the analysis of the EMG time series, the subject type is most likely:
+
+The answer is [B] || 2025-11-13 17:48:11
+[INFO] Line 6: False	 | To determine the subject type based on the provided EMG time series, we need to analyze the characteristics of the signal. 
+
+1. **Signal Amplitude**: The values in the time series fluctuate between positive and negative values, indicating muscle activity. The presence of both positive and negative values suggests that there is some level of muscle activation, but the amplitude appears to be relatively low, which may indicate a less active muscle state.
+
+2. **Trends and Patterns**: The time series shows a mix of small fluctuations and some larger spikes, particularly in the later part of the series. The presence of larger negative values (e.g., -10.994895935058594) suggests potential muscle fatigue or abnormal muscle activity, which is often seen in conditions like myopathy or neuropathy.
+
+3. **Overall Activity Level**: The overall activity level seems to be lower than what would be expected in a healthy individual, as indicated by the frequent transitions between low positive and negative values. This could suggest a pathological condition affecting muscle function.
+
+4. **Comparison with Subject Types**:
+   - **Healthy (normal)**: Typically would show consistent and higher amplitude values with less fluctuation.
+   - **Myopathy**: Often presents with reduced muscle strength and may show abnormal EMG patterns, including low amplitude and increased variability.
+   - **Neuropathy**: Can show similar patterns to myopathy but may also include signs of denervation or reinnervation, which could be indicated by the presence of larger spikes or irregular patterns.
+
+Given the characteristics of the time series, particularly the low amplitude and the presence of significant negative values, it is more indicative of a pathological condition rather than a healthy state. The fluctuations and the presence of larger negative values suggest that the subject may be experiencing muscle dysfunction.
+
+Based on this analysis, the most appropriate classification for the subject type is:
+
+The answer is [B] || 2025-11-13 17:48:11
+[INFO] Line 7: True	 | To determine the subject type based on the provided EMG time series, we need to analyze the characteristics of the signal. 
+
+1. **Signal Amplitude**: The values in the time series fluctuate between positive and negative values, indicating muscle activity. The presence of both high and low values suggests variability in muscle activation.
+
+2. **Mean and Variance**: The mean of the signal appears to be around zero, with fluctuations indicating some level of muscle activity. However, the variance may be indicative of muscle fatigue or abnormal muscle activation patterns.
+
+3. **Patterns of Activity**: The time series shows periods of low activity (values close to zero) interspersed with higher activity (positive values). This could suggest a pattern consistent with muscle fatigue or a neuromuscular disorder.
+
+4. **Negative Values**: The presence of significant negative values, especially in the context of muscle activation, could indicate a pathological condition. In healthy individuals, we would expect more consistent positive values during muscle activation.
+
+5. **Overall Trends**: The time series shows a mix of low and high values, with some abrupt changes, which could indicate irregular muscle firing patterns. This is often seen in conditions like neuropathy or myopathy.
+
+Given these observations, the presence of significant negative values and irregular patterns suggests that the subject may not be healthy. The characteristics align more closely with neuropathy, which is characterized by abnormal muscle activation patterns and potential muscle weakness.
+
+Therefore, based on the analysis of the EMG time series, the subject type is likely:
+
+The answer is [C] || 2025-11-13 17:48:11
+[INFO] Line 8: False	 | To determine the subject type based on the provided EMG time series, we need to analyze the characteristics of the signal. 
+
+1. **Signal Amplitude**: The values in the time series range from negative to positive, indicating fluctuations in muscle activity. The presence of both positive and negative values suggests that there is some level of muscle activation and relaxation.
+
+2. **Mean Absolute Value (MAV)**: The MAV can be calculated to assess the overall muscle activation. Given the values, it appears that there are periods of low activity (values close to zero) and periods of higher activity (values above 0.1). 
+
+3. **Variance and RMS**: The variance and root mean square (RMS) of the signal can provide insights into the stability and power of the muscle contractions. The presence of both high and low values suggests variability in muscle activation, which can be indicative of a neuromuscular condition.
+
+4. **Zero Crossing Rate (ZCR)**: The ZCR can indicate the frequency of muscle fiber recruitment. A higher ZCR may suggest more active muscle fibers, while a lower ZCR may indicate less recruitment.
+
+5. **Patterns of Activation**: The time series shows a pattern of alternating muscle activation and relaxation, which is typical in healthy muscle function. However, the presence of significant negative values and the overall pattern may suggest some underlying issues.
+
+Based on the analysis of the EMG time series, the presence of significant fluctuations, particularly the negative values and the overall variability, suggests that the subject may not be healthy. The characteristics align more closely with signs of myopathy or neuropathy rather than normal healthy muscle function.
+
+Given the options:
+- [A] Healthy (normal)
+- [B] Myopathy
+- [C] Neuropathy
+
+The most fitting classification based on the observed patterns and characteristics in the EMG time series is [B] Myopathy, as the signal shows signs of muscle dysfunction.
+
+The answer is [B] || 2025-11-13 17:48:11
+[INFO] Line 9: True	 | To determine the subject type based on the provided EMG time series, we need to analyze the characteristics of the signal. 
+
+1. **Signal Amplitude**: The time series shows a range of values, including both positive and negative peaks. The presence of negative values indicates that there are periods of muscle inactivity or potential muscle fatigue.
+
+2. **Mean and Variance**: The mean of the signal appears to be low, with many values hovering around zero, suggesting that the muscle activity is not consistently high. The variance may indicate fluctuations in muscle activation, which can be characteristic of certain neuromuscular conditions.
+
+3. **Patterns of Activation**: The time series shows a mix of low and high values, with some spikes indicating bursts of activity. However, the overall trend seems to indicate a lack of consistent high-level muscle activation, which could suggest a pathological condition.
+
+4. **Comparison with Subject Types**:
+   - **Healthy (normal)**: Typically shows consistent and higher amplitude signals with less fluctuation.
+   - **Myopathy**: Often presents with reduced amplitude and more variability in the signal due to muscle weakness.
+   - **Neuropathy**: Can show irregular patterns, with both high and low amplitudes, but often with a characteristic pattern of reduced muscle activation.
+
+Given the characteristics of the provided EMG time series, the presence of low amplitude signals, fluctuations, and the overall pattern suggest that the subject may have a neuromuscular condition rather than being healthy or having myopathy.
+
+Thus, based on the analysis, the most fitting classification for this EMG time series is:
+
+The answer is [C] || 2025-11-13 17:48:11
+[INFO] Line 10: True	 | To determine the subject type based on the provided EMG time series, we need to analyze the characteristics of the signal. 
+
+1. **Signal Amplitude**: The values in the time series fluctuate between negative and positive values, indicating muscle activity. The presence of both high and low values suggests variability in muscle activation.
+
+2. **Trends and Patterns**: The time series shows a mix of negative and positive values, with some significant peaks and troughs. The presence of large negative values (e.g., -1.9502202272415161, -2.7903823852539062) indicates potential muscle dysfunction or abnormal activity.
+
+3. **Fatigue Indicators**: The signal shows signs of fatigue, as indicated by the presence of prolonged negative values and the variability in the amplitude. This could suggest a condition affecting muscle function.
+
+4. **Comparison with Subject Types**:
+   - **Healthy (normal)**: Typically, a healthy EMG signal would show consistent and well-defined patterns of muscle activation without significant negative excursions.
+   - **Myopathy**: This condition often presents with abnormal muscle signals, including reduced amplitude and increased variability, which aligns with the observed fluctuations in the time series.
+   - **Neuropathy**: Neuropathy can also show abnormal signals, but it often presents with different patterns, such as reduced recruitment of muscle fibers.
+
+Given the significant negative values and the overall pattern of the EMG signal, it is more indicative of a myopathic condition rather than a healthy or neuropathic state.
+
+Therefore, based on the analysis of the EMG time series, the subject type is most likely:
+
+The answer is [B] || 2025-11-13 17:48:11
+[INFO] Line 11: True	 | To determine the subject type based on the provided EMG time series, we need to analyze the characteristics of the signal. 
+
+1. **Signal Amplitude**: The time series shows a mix of positive and negative values, indicating muscle activity. The presence of both high positive peaks and significant negative values suggests variability in muscle activation.
+
+2. **Trends and Patterns**: The time series has several peaks, with some values reaching as high as 5.7, which indicates strong muscle contractions. However, there are also significant dips into negative values, which could indicate muscle fatigue or abnormal muscle activity.
+
+3. **Fatigue Indicators**: The presence of high positive values followed by lower values and negative values may suggest that the muscle is experiencing fatigue or is not functioning normally. This is often seen in myopathy or neuropathy conditions.
+
+4. **Comparative Analysis**: 
+   - **Healthy (normal)**: Typically, a healthy EMG would show consistent and stable muscle activation patterns without significant dips into negative values.
+   - **Myopathy**: This condition often presents with reduced amplitude and increased variability in the EMG signal, which can be seen in the provided data.
+   - **Neuropathy**: This condition can also show abnormal patterns, including high variability and potential for both high and low amplitude signals.
+
+Given the characteristics of the time series, particularly the significant negative values and the variability in the signal, it is more indicative of a pathological condition rather than a healthy muscle response.
+
+Based on this analysis, the most fitting classification for the subject type based on the EMG time series is:
+
+The answer is [B] || 2025-11-13 17:48:11
+[INFO] Line 12: True	 | To determine the subject type based on the provided EMG time series, we need to analyze the characteristics of the signal. 
+
+1. **Signal Amplitude**: The values in the time series fluctuate between positive and negative values, indicating muscle activity. The presence of both positive and negative values suggests that there is some level of muscle activation and relaxation.
+
+2. **Mean Absolute Value (MAV)**: The MAV can be calculated from the time series to assess the overall muscle activation. A higher MAV typically indicates more muscle activity, which is often seen in healthy individuals.
+
+3. **Variance and RMS**: The variance and root mean square (RMS) values can provide insights into the stability and power of the muscle contractions. A healthy muscle would typically show a consistent pattern of activation without excessive fluctuations.
+
+4. **Zero Crossing Rate (ZCR)**: This measures how often the signal crosses zero, which can indicate the frequency of muscle activation. A higher ZCR may suggest more active muscle fibers.
+
+5. **Frequency Domain Analysis**: Analyzing the frequency components of the EMG signal can help identify patterns associated with different muscle conditions. For example, a shift in frequency components can indicate muscle fatigue or neuropathy.
+
+6. **Patterns of Activation**: The time series shows a pattern of muscle activation that appears to be relatively consistent, with some fluctuations. However, the presence of significant negative values and the overall pattern suggest that there may be some underlying issues.
+
+Given the characteristics of the EMG time series, the presence of both positive and negative values, and the fluctuations in the signal, it is likely that the subject is experiencing some form of muscle dysfunction. The patterns observed are more indicative of myopathy or neuropathy rather than a healthy muscle.
+
+Based on the analysis, the most appropriate classification for this EMG time series is:
+
+The answer is [B] || 2025-11-13 17:48:11
+[INFO] Line 13: False	 | To determine the subject type based on the provided EMG time series, we need to analyze the characteristics of the signal. 
+
+1. **Signal Amplitude**: The time series shows a mix of positive and negative values, indicating varying muscle activity. The presence of large negative values (e.g., -3.1819872856140137) suggests potential muscle dysfunction or abnormal activity.
+
+2. **Patterns of Activity**: The time series contains abrupt changes and fluctuations, which can indicate irregular muscle activation patterns. For example, the presence of large spikes followed by significant drops could suggest issues with muscle recruitment or coordination.
+
+3. **Overall Trends**: The series shows both high and low amplitude signals, with some sections indicating potential muscle fatigue or abnormal firing patterns. The presence of sustained low values interspersed with high peaks may indicate a lack of consistent muscle activation, which is often seen in myopathy or neuropathy.
+
+4. **Comparison with Subject Types**:
+   - **Healthy (normal)**: Typically, a healthy EMG would show consistent and well-defined patterns of muscle activation with minimal noise and fluctuations.
+   - **Myopathy**: This condition often presents with reduced amplitude and increased variability in the EMG signal, which aligns with the observed fluctuations in the time series.
+   - **Neuropathy**: Neuropathy can also show irregular patterns, but it often includes signs of denervation or reinnervation, which may not be as evident in this time series.
+
+Given the characteristics of the time series, including the presence of large fluctuations, negative values, and irregular patterns, it is more indicative of a myopathic condition rather than a healthy or purely neuropathic condition.
+
+Therefore, the conclusion is that the subject type is most likely:
+
+The answer is [B] || 2025-11-13 17:48:11
+[INFO] Line 14: False	 | To determine the subject type based on the provided EMG time series, we need to analyze the characteristics of the signal. 
+
+1. **Signal Amplitude**: The values in the time series fluctuate between negative and positive values, indicating muscle activity. The presence of negative values suggests that there may be some level of muscle dysfunction or abnormality.
+
+2. **Trends and Patterns**: The time series shows a pattern of oscillation with both positive and negative peaks. The presence of significant negative values, especially those that are consistently low, may indicate muscle weakness or atrophy, which is often associated with myopathy or neuropathy.
+
+3. **Comparative Analysis**: 
+   - **Healthy (normal)** subjects typically show a more stable and higher amplitude of EMG signals with less fluctuation.
+   - **Myopathy** is characterized by muscle weakness and may show lower amplitude signals with more variability.
+   - **Neuropathy** often presents with irregular firing patterns and can also show reduced amplitude, but the patterns may differ from myopathy.
+
+4. **Specific Observations**: 
+   - The time series contains several instances of low amplitude values and significant negative peaks, which are indicative of muscle dysfunction.
+   - The presence of consistent low values and the overall pattern suggests that the subject may have a neuromuscular condition.
+
+Based on the analysis of the EMG time series, the most likely classification for this subject is [B] Myopathy, as the signal characteristics align more closely with muscle dysfunction typically seen in myopathic conditions.
+
+The answer is [B] || 2025-11-13 17:48:11
+[INFO] Line 15: False	 | To determine the subject type based on the provided EMG time series, we need to analyze the characteristics of the signal. 
+
+1. **Signal Amplitude**: The time series shows a mix of positive and negative values, indicating muscle activity. The presence of both high and low amplitude values suggests variability in muscle activation.
+
+2. **Trends and Patterns**: The time series has sections where the values fluctuate significantly, indicating potential muscle fatigue or abnormal muscle activation patterns. The presence of negative values suggests that there may be periods of reduced muscle activity or even muscle inhibition.
+
+3. **Overall Activity Level**: The overall trend appears to show a mix of low and high activity levels, with some spikes that could indicate bursts of muscle activity. However, the presence of sustained low values and negative values could indicate a pathological condition.
+
+4. **Comparison with Subject Types**:
+   - **Healthy (normal)**: Typically, a healthy EMG would show consistent and clear patterns of muscle activation with minimal negative values.
+   - **Myopathy**: This condition often presents with reduced amplitude and abnormal patterns due to muscle fiber damage.
+   - **Neuropathy**: This condition can show irregular patterns, including both reduced and increased activity, often with periods of inhibition.
+
+Given the characteristics of the time series, particularly the presence of significant negative values and irregular patterns, it is more indicative of a neuropathic condition rather than a healthy or myopathic state.
+
+Therefore, based on the analysis, the subject type is most likely:
+
+The answer is [C] || 2025-11-13 17:48:11
+[INFO] Line 16: False	 | To determine the subject type based on the provided EMG time series, we need to analyze the characteristics of the signal. 
+
+1. **Signal Amplitude**: The time series shows a mix of positive and negative values, indicating muscle activity. The presence of both high positive peaks and significant negative values suggests variability in muscle activation.
+
+2. **Mean and Variance**: The mean of the signal appears to be fluctuating around zero, with some peaks indicating muscle contractions. The variance is likely high due to the presence of both high peaks and deep troughs, which can indicate muscle fatigue or abnormal muscle activation patterns.
+
+3. **Patterns of Activation**: The time series shows periods of high activity followed by periods of low activity, which could indicate a pattern of muscle recruitment that is not typical for healthy muscle function. The presence of large negative values may suggest muscle inhibition or neuropathic conditions.
+
+4. **Comparison with Subject Types**:
+   - **Healthy (normal)**: Typically shows consistent and moderate amplitude with less variability.
+   - **Myopathy**: May show reduced amplitude and more consistent low-level activity due to muscle weakness.
+   - **Neuropathy**: Often presents with irregular patterns, high variability, and can include both high and low amplitude spikes due to erratic muscle activation.
+
+Given the characteristics of the provided EMG time series, the significant fluctuations, and the presence of both high and low values, it is indicative of a neuropathic condition rather than a healthy or myopathic state.
+
+Therefore, the conclusion is that the subject type is likely [C] Neuropathy.
+
+The answer is [C] || 2025-11-13 17:48:11
+[INFO] Line 17: True	 | To determine the subject type based on the provided EMG time series data, we need to analyze the characteristics of the signal. 
+
+1. **Signal Amplitude**: The values in the time series show a range of positive and negative values, indicating muscle activity. The presence of both high positive values and significant negative values suggests that there may be some level of muscle dysfunction.
+
+2. **Trends and Patterns**: The time series shows fluctuations with peaks and troughs, which can indicate muscle activation and relaxation cycles. However, the presence of very low values (negative peaks) suggests potential issues with muscle function.
+
+3. **Comparison with Subject Types**:
+   - **Healthy (normal)**: Typically, a healthy EMG signal would show consistent and stable muscle activation patterns with minimal negative values.
+   - **Myopathy**: This condition often presents with reduced amplitude and more irregular patterns due to muscle fiber damage.
+   - **Neuropathy**: This condition can show a mix of high and low amplitudes, often with irregular firing patterns due to nerve damage.
+
+Given the significant negative values and the overall pattern of the EMG signal, it suggests that the subject may have a neuromuscular condition affecting muscle function. The presence of both high and low values, along with the fluctuations, aligns more closely with neuropathy than with myopathy or a healthy state.
+
+Therefore, based on the analysis of the EMG time series data, the most appropriate classification for the subject type is:
+
+The answer is [C] || 2025-11-13 17:48:11
+[INFO] Line 18: False	 | To determine the subject type based on the provided EMG time series, we need to analyze the characteristics of the signal. 
+
+1. **Signal Amplitude**: The values in the time series fluctuate between positive and negative values, indicating muscle activity. The presence of both high and low values suggests variability in muscle activation.
+
+2. **Mean and Variance**: The mean of the signal appears to be around zero, with fluctuations indicating periods of muscle activation and relaxation. The variance of the signal can provide insights into the stability of muscle activation.
+
+3. **Patterns of Activation**: The time series shows periods of significant muscle activity (positive values) followed by periods of inactivity or reduced activity (negative values). This pattern can be indicative of muscle fatigue or a response to external stimuli.
+
+4. **Comparison with Subject Types**:
+   - **Healthy (normal)**: Typically shows a balanced pattern of muscle activation with a clear response to stimuli and recovery.
+   - **Myopathy**: Often presents with reduced amplitude and more consistent low values, indicating weakness or inability to generate normal muscle force.
+   - **Neuropathy**: May show irregular patterns, with significant fluctuations and potential spikes indicating erratic muscle activation due to nerve damage.
+
+Given the provided time series, the presence of both high and low values, along with the variability in the signal, suggests that the subject is likely experiencing some form of muscle dysfunction rather than normal healthy muscle activity. The fluctuations and the presence of negative values indicate that the muscle may not be responding normally, which aligns more closely with neuropathy.
+
+Therefore, based on the analysis of the EMG time series, the most appropriate classification for the subject type is:
+
+The answer is [C] || 2025-11-13 17:48:11
+[INFO] Line 19: True	 | To determine the subject type based on the provided EMG time series, we need to analyze the characteristics of the signal. 
+
+1. **Signal Amplitude**: The time series shows a mix of positive and negative values, indicating muscle activity. The presence of both high positive and negative peaks suggests variability in muscle activation.
+
+2. **Mean and Variance**: The mean of the signal appears to be fluctuating around zero, with some peaks indicating muscle contractions. The variance is likely high due to the presence of both high positive and negative values, which can indicate muscle fatigue or abnormal muscle activation patterns.
+
+3. **Patterns of Activation**: The time series shows periods of high activity followed by lower activity, which could indicate muscle fatigue or a response to a stimulus. The presence of negative values suggests that there may be periods of muscle relaxation or inhibition.
+
+4. **Comparison with Subject Types**:
+   - **Healthy (normal)**: Typically shows consistent and predictable patterns of muscle activation with less variability.
+   - **Myopathy**: Often presents with reduced amplitude and more consistent low-level activity due to muscle weakness.
+   - **Neuropathy**: Can show irregular patterns, including both high and low amplitude spikes, as well as periods of inactivity or reduced muscle response.
+
+Given the characteristics of the provided EMG time series, the presence of significant fluctuations, both positive and negative, and the variability in muscle activation patterns suggest that this subject may be experiencing neuropathy. The irregularities in the signal, along with the presence of both high and low amplitude values, align more closely with neuropathic conditions than with healthy or myopathic conditions.
+
+Therefore, the conclusion is that the subject type is likely:
+
+The answer is [C] || 2025-11-13 17:48:11
+[INFO] Line 20: True	 | To determine the subject type based on the provided EMG time series, we need to analyze the characteristics of the signal. 
+
+1. **Signal Amplitude**: The time series shows a range of values, including both positive and negative peaks. The presence of large negative values (e.g., -7.3890557289123535) suggests significant muscle activity or potential muscle dysfunction.
+
+2. **Trends and Patterns**: The time series exhibits fluctuations with both high and low values, indicating variability in muscle activation. The presence of very low values and large negative spikes could indicate muscle fatigue or damage.
+
+3. **Signal Characteristics**: The signal shows a mix of low and high frequency components, which can be indicative of different muscle conditions. The presence of high peaks followed by low values may suggest a pattern consistent with myopathy or neuropathy.
+
+4. **Comparison with Subject Types**:
+   - **Healthy (normal)**: Typically, a healthy EMG signal would show consistent and moderate amplitude without extreme fluctuations.
+   - **Myopathy**: This condition often presents with reduced amplitude and increased variability in the EMG signal, which aligns with the observed fluctuations and negative peaks.
+   - **Neuropathy**: This condition can also show abnormal patterns, but the presence of very high negative values suggests a more severe dysfunction, which is more characteristic of myopathy.
+
+Given the analysis of the EMG time series, the significant negative values and the overall pattern suggest that the subject is likely experiencing myopathy.
+
+The answer is [B] || 2025-11-13 17:48:11
+[INFO] Line 21: True	 | To determine the subject type based on the provided EMG time series, we need to analyze the characteristics of the signal. 
+
+1. **Signal Amplitude**: The time series shows a range of values, including both positive and negative peaks. The presence of significant negative values suggests potential muscle dysfunction or abnormal activity.
+
+2. **Trends and Patterns**: The time series exhibits fluctuations with both high and low values, indicating variability in muscle activation. The presence of large negative values (e.g., -2.981753349304199) suggests possible muscle fatigue or neuropathic changes.
+
+3. **Signal Characteristics**: The signal shows a pattern of alternating high and low values, which can be indicative of neuropathy, where the muscle fibers may not be firing correctly or are being inhibited.
+
+4. **Comparison with Subject Types**:
+   - **Healthy (normal)**: Typically, a healthy EMG would show consistent and moderate amplitude values without significant negative excursions.
+   - **Myopathy**: Myopathy would show signs of muscle weakness and potential changes in the waveform, but the presence of large negative values is more characteristic of neuropathy.
+   - **Neuropathy**: The presence of significant negative values and the overall pattern of the signal suggest that the muscle activation is not normal, which aligns with neuropathic conditions.
+
+Based on the analysis of the EMG time series, the most fitting classification for the subject type is **Neuropathy**.
+
+The answer is [C] || 2025-11-13 17:48:11
+[INFO] Line 22: False	 | To determine the subject type based on the provided EMG time series, we need to analyze the characteristics of the signal. 
+
+1. **Signal Amplitude**: The values in the time series show a range of positive and negative values, indicating muscle activity. The presence of both high positive and negative values suggests that there is significant muscle activation.
+
+2. **Trends and Patterns**: The time series shows fluctuations with peaks and troughs, which can indicate muscle contractions and relaxations. The presence of high peaks (e.g., values around 5) suggests strong muscle contractions, while the negative values indicate potential muscle fatigue or dysfunction.
+
+3. **Fatigue Indicators**: The presence of negative values and the overall pattern of the signal can indicate muscle fatigue or a pathological condition. In healthy individuals, we would expect a more stable and less variable signal.
+
+4. **Comparison with Subject Types**:
+   - **Healthy (normal)**: Typically shows consistent and stable EMG signals with less variability.
+   - **Myopathy**: Often presents with reduced amplitude and increased variability due to muscle fiber damage.
+   - **Neuropathy**: Can show irregular patterns, with both high and low amplitudes, indicating nerve damage affecting muscle activation.
+
+Given the significant fluctuations, the presence of high peaks, and the negative values, this EMG time series suggests a pathological condition rather than a healthy state. The variability and presence of negative values are more indicative of neuropathy, where nerve damage can lead to irregular muscle activation patterns.
+
+Thus, based on the analysis, the most appropriate classification for this EMG time series is:
+
+The answer is [C] || 2025-11-13 17:48:11
+[INFO] Line 23: True	 | To determine the subject type based on the provided EMG time series, we need to analyze the characteristics of the signal. 
+
+1. **Signal Amplitude**: The time series shows a range of values, including both positive and negative peaks. The presence of negative values indicates that there may be some level of muscle inactivity or dysfunction.
+
+2. **Trends and Patterns**: The time series exhibits fluctuations with both small and large variations. The presence of large negative values (e.g., -8.818781852722168) suggests significant muscle activity issues, which could be indicative of a pathological condition.
+
+3. **Signal Stability**: The signal shows periods of stability interspersed with abrupt changes, which may suggest muscle fatigue or abnormal muscle activation patterns.
+
+4. **Overall Characteristics**: The overall pattern of the EMG signal, including the presence of high negative peaks and the variability in amplitude, suggests that the muscle function is not normal. 
+
+Based on these observations, the EMG time series indicates that the subject is likely experiencing a neuromuscular disorder, which aligns with the characteristics of neuropathy.
+
+Thus, the classification based on the EMG time series is:
+
+The answer is [C] || 2025-11-13 17:48:11
+[INFO] Line 24: False	 | To determine the subject type based on the provided EMG time series, we need to analyze the characteristics of the signal. 
+
+1. **Signal Amplitude**: The time series shows a range of values, including both negative and positive peaks. The presence of negative values suggests that there may be some level of muscle inactivity or dysfunction.
+
+2. **Patterns of Activity**: The time series exhibits fluctuations with both high and low values, indicating varying levels of muscle activation. The presence of large negative values (e.g., -2.733053207397461) suggests significant muscle inactivity or potential muscle damage.
+
+3. **Overall Trends**: The signal shows a mix of low and high amplitude values, with some sections indicating potential muscle fatigue or abnormal muscle activation patterns. The presence of sustained low values interspersed with higher peaks may indicate a pathological condition.
+
+4. **Comparison with Subject Types**:
+   - **Healthy (normal)**: Typically, a healthy EMG signal would show consistent and well-defined patterns of muscle activation without significant negative values.
+   - **Myopathy**: This condition often presents with reduced amplitude and abnormal patterns due to muscle fiber damage.
+   - **Neuropathy**: This condition can show irregularities in the EMG signal, including both reduced and increased amplitudes, but often with more pronounced fluctuations and irregular patterns.
+
+Given the characteristics of the provided EMG time series, particularly the presence of significant negative values and the overall irregularity in the signal, it is indicative of a pathological condition rather than a healthy muscle response.
+
+Based on this analysis, the most fitting classification for the subject type is **Myopathy**, as the signal suggests muscle dysfunction consistent with this condition.
+
+The answer is [B] || 2025-11-13 17:48:11
+[INFO] Batch rows: 25 → 47 || 2025-11-13 17:48:11
+[INFO] Line 25: False	 | To determine the subject type based on the provided EMG time series, we need to analyze the characteristics of the signal. 
+
+1. **Signal Amplitude**: The time series shows a mix of positive and negative values, indicating muscle activity. The presence of negative values suggests potential muscle dysfunction or abnormal activity.
+
+2. **Trends and Patterns**: The signal exhibits fluctuations with both high and low amplitudes. The presence of large negative spikes (e.g., -2.1847727298736572) indicates possible muscle fatigue or damage, which is often seen in myopathy or neuropathy.
+
+3. **Signal Stability**: The signal shows periods of stability followed by abrupt changes, which can be indicative of neuropathic conditions where nerve signals are disrupted.
+
+4. **Overall Activity Levels**: The overall activity levels appear to be lower than what would be expected in a healthy individual, with many values clustering around zero or negative, which is not typical for healthy muscle function.
+
+5. **Comparison with Subject Types**:
+   - **Healthy (normal)**: Would typically show consistent positive values with less fluctuation and higher overall amplitude.
+   - **Myopathy**: Often presents with reduced muscle strength and abnormal EMG patterns, which could align with the observed fluctuations and negative spikes.
+   - **Neuropathy**: Can show irregular patterns and reduced signal amplitude, which is consistent with the observed data.
+
+Given the characteristics of the EMG time series, the presence of significant negative values, and the overall pattern of the signal, it is more indicative of a neuropathic condition rather than a healthy or purely myopathic condition.
+
+Thus, the most appropriate classification for this EMG time series is:
+
+The answer is [C] || 2025-11-13 17:48:33
+[INFO] Line 26: True	 | To determine the subject type based on the provided EMG time series, we need to analyze the characteristics of the signal. 
+
+1. **Signal Amplitude**: The time series shows a mix of positive and negative values, indicating muscle activity. The presence of both high and low values suggests variability in muscle activation.
+
+2. **Trends and Patterns**: The time series has sections with significant fluctuations, including both high peaks and deep troughs. This could indicate muscle fatigue or abnormal muscle activation patterns.
+
+3. **Negative Values**: The presence of negative values, especially significant ones, can indicate muscle weakness or dysfunction. In healthy individuals, we would expect a more stable and positive signal with less variability.
+
+4. **Overall Activity Level**: The overall activity level appears to be lower than what would be expected in a healthy individual, with many values clustering around zero or being negative.
+
+5. **Comparison with Subject Types**:
+   - **Healthy (normal)**: Would typically show consistent and stable positive values with less fluctuation.
+   - **Myopathy**: Characterized by muscle weakness and potential for abnormal EMG readings, which could include significant fluctuations and negative values.
+   - **Neuropathy**: Often presents with irregular patterns and can show signs of muscle denervation, which may also lead to negative values.
+
+Given the analysis, the presence of significant negative values and the overall pattern of the EMG signal suggests that the subject is likely experiencing muscle dysfunction consistent with myopathy.
+
+Thus, the final answer is: The answer is [B]. || 2025-11-13 17:48:33
+[INFO] Line 27: True	 | To determine the subject type based on the provided EMG time series, we need to analyze the characteristics of the signal. 
+
+1. **Signal Amplitude**: The time series shows a range of values, with some peaks reaching significant positive values (e.g., 2.256304979324341) and some negative values (e.g., -11.11039924621582). This indicates a high level of muscle activity at certain points, which could suggest a pathological condition.
+
+2. **Variability**: The presence of large negative values suggests that there may be significant muscle fatigue or dysfunction. In healthy individuals, we would expect a more stable signal with less extreme fluctuations.
+
+3. **Patterns of Activation**: The time series shows a mix of low and high amplitude signals, which could indicate irregular muscle activation patterns. In healthy subjects, we would expect more consistent and predictable patterns of muscle activation.
+
+4. **Overall Trends**: The overall trend of the signal shows significant fluctuations, including very low values, which could indicate muscle weakness or a neuromuscular disorder.
+
+Based on these observations, the EMG signal does not appear to represent a healthy individual. The presence of extreme negative values and irregular patterns suggests that the subject may have a neuromuscular condition.
+
+Given the options:
+- [A] Healthy (normal)
+- [B] Myopathy
+- [C] Neuropathy
+
+The most fitting classification for this EMG time series is [C] Neuropathy, as the irregularities and extreme values are more indicative of neuropathic conditions rather than myopathy or a healthy state.
+
+The answer is [C] || 2025-11-13 17:48:33
+[INFO] Line 28: False	 | To determine the subject type based on the provided EMG time series, we need to analyze the characteristics of the signal. 
+
+1. **Signal Amplitude**: The time series shows a mix of positive and negative values, indicating muscle activity. The presence of high peaks (e.g., values like 5.152756214141846) suggests significant muscle activation, which can be indicative of a healthy muscle response.
+
+2. **Variability**: The time series exhibits fluctuations, with both high and low values. This variability can indicate muscle recruitment patterns. However, the presence of very low values (e.g., -1.813161015510559) suggests potential issues with muscle function.
+
+3. **Negative Values**: The presence of negative values in the time series could indicate muscle fatigue or dysfunction. In healthy individuals, we would expect a more consistent positive signal with less fluctuation.
+
+4. **Overall Trends**: The time series shows some high peaks followed by significant drops, which could indicate a lack of endurance or muscle control. This pattern is often seen in myopathy or neuropathy conditions.
+
+5. **Comparison with Subject Types**:
+   - **Healthy (normal)**: Typically shows consistent and stable EMG signals with less variability and fewer negative values.
+   - **Myopathy**: Often presents with reduced amplitude and increased variability, indicating muscle weakness and dysfunction.
+   - **Neuropathy**: Can show irregular patterns, including both high and low amplitudes, and may include negative values indicating nerve damage or dysfunction.
+
+Given the analysis of the time series, the presence of significant negative values, high variability, and the overall pattern suggests that the subject may have a neuromuscular condition rather than being healthy or having myopathy.
+
+Therefore, the most appropriate classification for this EMG time series is:
+
+The answer is [C] || 2025-11-13 17:48:33
+[INFO] Line 29: False	 | To determine the subject type based on the provided EMG time series, we need to analyze the characteristics of the signal. 
+
+1. **Signal Amplitude**: The values in the time series are relatively low, with most values fluctuating around zero. This suggests that the muscle activity is not very high, which could indicate a healthy muscle or a muscle that is not being activated strongly.
+
+2. **Patterns of Activity**: The time series shows a pattern of small fluctuations, with some negative values indicating potential muscle relaxation or inactivity. The presence of both positive and negative values suggests that there is some level of muscle activity, but it is not consistent or strong.
+
+3. **Comparison with Subject Types**:
+   - **Healthy (normal)**: Typically, a healthy EMG would show a more consistent and higher amplitude of muscle activity, especially during voluntary contractions.
+   - **Myopathy**: This condition often presents with reduced amplitude and increased variability in the EMG signal due to muscle fiber damage or dysfunction.
+   - **Neuropathy**: This condition can show reduced amplitude and abnormal firing patterns, often with more significant fluctuations than what is observed in healthy muscle.
+
+Given the characteristics of the provided EMG time series, the low amplitude and the pattern of activity suggest that the subject may not be exhibiting the typical signs of healthy muscle activity. The fluctuations and the presence of negative values indicate a lack of strong, consistent muscle activation, which aligns more closely with myopathy than with healthy muscle function.
+
+Therefore, based on the analysis, the most appropriate classification for the subject type based on the EMG time series is:
+
+The answer is [B] || 2025-11-13 17:48:33
+[INFO] Line 30: False	 | To determine the subject type based on the provided EMG time series, we need to analyze the characteristics of the signal. 
+
+1. **Signal Amplitude**: The time series shows a mix of positive and negative values, with some significant negative peaks (e.g., -3.3921544551849365, -4.3189311027526855). This suggests that there may be abnormal muscle activity or potential muscle damage.
+
+2. **Variability**: The presence of large fluctuations in the signal, including both high positive and negative values, indicates a potential issue with muscle function. Healthy muscle activity typically shows a more stable pattern.
+
+3. **Negative Peaks**: The extreme negative values in the time series could indicate muscle fatigue or damage, which is often seen in myopathy or neuropathy conditions.
+
+4. **Overall Trends**: The overall trend of the signal shows a lot of variability and some extreme values, which is not typical for a healthy muscle. 
+
+Based on these observations, the presence of significant negative values and the variability in the signal suggest that the subject may have a neuromuscular disorder. 
+
+Given the options:
+- [A] Healthy (normal)
+- [B] Myopathy
+- [C] Neuropathy
+
+The most fitting classification for this EMG time series is [C] Neuropathy, as the signal characteristics align more closely with neuropathic conditions rather than healthy muscle function or myopathy.
+
+The answer is [C] || 2025-11-13 17:48:33
+[INFO] Line 31: False	 | To determine the subject type based on the provided EMG time series, we need to analyze the characteristics of the signal. 
+
+1. **Signal Amplitude**: The time series shows a range of values, including both positive and negative peaks. The presence of large negative values (e.g., -3.684429407119751) suggests significant muscle activity fluctuations, which can be indicative of neuromuscular issues.
+
+2. **Patterns of Activity**: The time series contains both high and low amplitude signals, with some abrupt changes. This could indicate irregular muscle activation patterns, which are often seen in neuropathic conditions.
+
+3. **Overall Trends**: The signal shows a mix of high positive values and significant negative excursions, which may suggest a lack of normal muscle control or coordination, often associated with neuropathy.
+
+4. **Comparison with Subject Types**:
+   - **Healthy (normal)**: Typically, a healthy EMG would show consistent and moderate amplitude with minimal fluctuations.
+   - **Myopathy**: Myopathy would show consistent low amplitude signals due to muscle weakness but not the extreme fluctuations seen here.
+   - **Neuropathy**: The irregularities and significant negative values in the time series align more closely with neuropathic conditions, where nerve damage leads to erratic muscle activation.
+
+Based on this analysis, the EMG time series indicates characteristics consistent with neuropathy.
+
+The answer is [C] || 2025-11-13 17:48:33
+[INFO] Line 32: False	 | To determine the subject type based on the provided EMG time series, we need to analyze the characteristics of the signal. 
+
+1. **Signal Amplitude**: The values in the time series show a range of positive and negative values, with some peaks reaching above 5. This indicates significant muscle activity, which is often seen in healthy individuals or those with certain conditions.
+
+2. **Trends and Patterns**: The time series shows a pattern of increasing values followed by a decrease, which can indicate muscle activation and relaxation cycles. The presence of both high and low values suggests that the muscle is capable of generating force and is not consistently weak.
+
+3. **Variability**: The time series exhibits variability in the amplitude, which is typical for healthy muscle function. In myopathy, we would expect to see reduced variability and lower overall amplitude due to muscle weakness.
+
+4. **Fatigue Indicators**: There are no clear signs of fatigue in the signal, such as a consistent downward trend in amplitude over time, which might suggest neuropathy or myopathy.
+
+5. **Overall Assessment**: Given the amplitude, variability, and lack of fatigue indicators, the EMG signal appears to be consistent with a healthy muscle function.
+
+Based on this analysis, the most appropriate classification for the subject type based on the EMG time series is:
+
+The answer is [A] || 2025-11-13 17:48:33
+[INFO] Line 33: True	 | To determine the subject type based on the provided EMG time series, we need to analyze the characteristics of the signal. 
+
+1. **Signal Amplitude**: The time series shows a mix of positive and negative values, indicating muscle activity. However, the presence of large negative values (e.g., -1.8982433080673218, -2.234937906265259) suggests significant muscle dysfunction or abnormal activity.
+
+2. **Trends and Patterns**: The time series exhibits fluctuations with both high peaks and deep troughs. The presence of extreme negative values and the overall pattern of the signal suggest that the muscle activity is not typical of a healthy individual. 
+
+3. **Comparison with Subject Types**:
+   - **Healthy (normal)**: Would typically show a more stable and less extreme range of values, with positive muscle activity and minimal negative excursions.
+   - **Myopathy**: This condition often presents with reduced muscle strength and may show some abnormal EMG patterns, but the extreme negative values observed here are more indicative of neuropathic issues.
+   - **Neuropathy**: The presence of significant negative values and erratic fluctuations in the EMG signal is characteristic of neuropathic conditions, where nerve damage leads to abnormal muscle activation patterns.
+
+Given the analysis of the EMG time series, the extreme negative values and the overall pattern strongly suggest that the subject is experiencing neuropathy.
+
+The answer is [C] || 2025-11-13 17:48:33
+[INFO] Line 34: True	 | To determine the subject type based on the provided EMG time series, we need to analyze the characteristics of the signal. 
+
+1. **Signal Amplitude**: The values in the time series fluctuate between positive and negative values, indicating muscle activity. The presence of both positive and negative values suggests that there is some level of muscle activation.
+
+2. **Mean Absolute Value (MAV)**: The MAV can be calculated from the time series to assess the overall muscle activation. Given the values, it appears that there are periods of both low and high activity.
+
+3. **Variance and RMS**: The variance and root mean square (RMS) values can provide insights into the muscle's power and fatigue. The presence of both high and low values in the time series suggests variability in muscle activation, which could indicate a potential issue.
+
+4. **Zero Crossing Rate (ZCR)**: The ZCR can help assess the frequency of muscle fiber recruitment. The time series shows fluctuations that may indicate changes in muscle fiber recruitment patterns.
+
+5. **Overall Pattern**: The time series shows a mix of low and high values, with some significant negative peaks. This could indicate muscle fatigue or a neuromuscular disorder.
+
+Based on the analysis of the EMG time series, the presence of significant negative values and the overall pattern of the signal suggest that the subject may have a neuromuscular condition rather than being healthy or having myopathy.
+
+Thus, the most appropriate classification for this subject type based on the EMG time series is:
+
+The answer is [C] || 2025-11-13 17:48:33
+[INFO] Line 35: False	 | To determine the subject type based on the provided EMG time series data, we need to analyze the characteristics of the signal. 
+
+1. **Signal Amplitude**: The values in the time series fluctuate between negative and positive values, indicating muscle activity. The presence of both high and low values suggests variability in muscle activation.
+
+2. **Trends and Patterns**: The time series shows periods of both high and low activity, with some segments indicating significant negative values, which could suggest muscle fatigue or dysfunction. The presence of large negative peaks (e.g., -2.5674591064453125) indicates potential issues with muscle function.
+
+3. **Frequency of Zero Crossings**: The data shows a mix of positive and negative values, which can indicate the recruitment of different muscle fibers. However, the presence of sustained negative values may suggest a pathological condition.
+
+4. **Overall Variability**: The time series shows a significant amount of variability, with some sections indicating a lack of consistent muscle activation. This could be indicative of a neuromuscular disorder.
+
+5. **Comparison with Subject Types**:
+   - **Healthy (normal)**: Typically would show consistent and stable activation patterns with less variability.
+   - **Myopathy**: Would show signs of muscle weakness and potential fatigue, but not necessarily the extreme fluctuations seen here.
+   - **Neuropathy**: Often characterized by irregular activation patterns, including periods of inactivity and abnormal muscle responses.
+
+Given the analysis, the significant fluctuations, presence of large negative values, and overall irregularity in the EMG signal suggest that the subject is likely experiencing a neuropathic condition.
+
+Thus, the conclusion is that the subject type based on the EMG time series is:
+
+The answer is [C] || 2025-11-13 17:48:33
+[INFO] Line 36: False	 | To determine the subject type based on the provided EMG time series, we need to analyze the characteristics of the signal. 
+
+1. **Signal Amplitude**: The values in the time series fluctuate between positive and negative values, indicating muscle activity. The presence of both positive and negative values suggests that there is some level of muscle activation.
+
+2. **Mean and Variance**: The mean of the signal appears to be close to zero, which is typical for a healthy muscle at rest. However, the variance of the signal can indicate the level of muscle activation and potential fatigue. 
+
+3. **Patterns of Activation**: The time series shows a pattern of small fluctuations, which may indicate a normal level of muscle activity without significant spikes that would suggest abnormal muscle activation patterns seen in myopathy or neuropathy.
+
+4. **Frequency Analysis**: If we were to perform a frequency analysis, we would look for the presence of high-frequency components that might indicate neuropathic changes or low-frequency components that could suggest myopathic changes. The provided data does not show any extreme values or patterns that would typically be associated with either condition.
+
+5. **Overall Assessment**: The time series does not exhibit the characteristics typically associated with myopathy (which would show more significant amplitude fluctuations and possibly more negative values) or neuropathy (which might show irregular firing patterns or reduced amplitude). 
+
+Based on the analysis, the EMG time series appears to reflect a normal pattern of muscle activity, suggesting that the subject is likely healthy.
+
+The answer is [A] || 2025-11-13 17:48:33
+[INFO] Line 37: False	 | To determine the subject type based on the provided EMG time series, we need to analyze the characteristics of the signal. 
+
+1. **Signal Amplitude**: The time series shows a mix of positive and negative values, indicating muscle activity. However, the presence of significant negative values (e.g., -1.2379035949707031, -1.4612339735031128) suggests potential muscle dysfunction or abnormal activity.
+
+2. **Variability**: The signal exhibits fluctuations with both high and low values, which can indicate muscle fatigue or irregular firing patterns. The presence of large negative spikes could suggest neuropathic changes or myopathic conditions.
+
+3. **Overall Trends**: The time series shows a pattern of alternating between positive and negative values, with some sections indicating a more stable signal and others showing erratic behavior. This could be indicative of neuropathy, where nerve damage leads to inconsistent muscle activation.
+
+4. **Comparison with Subject Types**:
+   - **Healthy (normal)**: Typically would show consistent and stable EMG readings with minimal fluctuations.
+   - **Myopathy**: Would show signs of muscle weakness and potential irregularities in the signal, but not necessarily the same erratic patterns seen here.
+   - **Neuropathy**: Often presents with irregular firing patterns, significant fluctuations, and can include both positive and negative spikes, which aligns with the observed data.
+
+Given the analysis of the EMG time series, the erratic nature of the signal, the presence of significant negative values, and the overall variability suggest that the subject is likely experiencing neuropathic changes.
+
+Therefore, the conclusion is that the subject type is best classified as neuropathy.
+
+The answer is [C] || 2025-11-13 17:48:33
+[INFO] Line 38: False	 | To determine the subject type based on the provided EMG time series data, we need to analyze the characteristics of the signal. 
+
+1. **Signal Amplitude**: The time series shows a range of values, including both positive and negative peaks. The presence of high positive values (e.g., 1.9512314796447754) suggests significant muscle activity, which can be indicative of a healthy muscle response. However, the presence of negative values (e.g., -1.627838134765625) may indicate some level of dysfunction or abnormality.
+
+2. **Variability and Patterns**: The time series exhibits fluctuations with both high and low values, which can indicate muscle recruitment patterns. The presence of both high peaks and deep troughs may suggest a lack of stability in muscle activation, which is often seen in myopathy or neuropathy.
+
+3. **Overall Trends**: The data shows a mix of high activity followed by significant drops, which could indicate muscle fatigue or a response to nerve damage. The presence of extreme negative values could suggest neuropathic changes, where the muscle is not receiving adequate signals from the nervous system.
+
+4. **Comparative Analysis**: 
+   - **Healthy (normal)**: Typically shows consistent and stable EMG signals with moderate amplitude and minimal fluctuations.
+   - **Myopathy**: May show reduced amplitude and increased variability due to muscle fiber damage.
+   - **Neuropathy**: Often presents with irregular patterns, significant fluctuations, and potential negative values due to disrupted nerve signals.
+
+Given the analysis of the EMG time series, the presence of both high positive and significant negative values, along with the variability in the signal, suggests that the subject may be experiencing issues related to nerve function.
+
+Therefore, based on the characteristics of the EMG time series, the most appropriate classification is:
+
+The answer is [C] || 2025-11-13 17:48:33
+[INFO] Line 39: False	 | To determine the subject type based on the provided EMG time series, we need to analyze the characteristics of the signal. 
+
+1. **Signal Amplitude**: The time series shows a mix of positive and negative values, indicating muscle activity. The presence of large negative values (e.g., -7.2706451416015625) suggests significant muscle dysfunction or abnormal activity.
+
+2. **Trends and Patterns**: The time series exhibits fluctuations with both high peaks and deep troughs. The presence of extreme negative values and the overall pattern of the signal suggest that the muscle activity is not typical of a healthy individual.
+
+3. **Comparison with Subject Types**:
+   - **Healthy (normal)**: Would typically show consistent and moderate amplitude values without extreme fluctuations.
+   - **Myopathy**: Often presents with reduced amplitude and may show some irregularities, but not typically extreme negative values.
+   - **Neuropathy**: Can show significant fluctuations and abnormal patterns, including extreme values, which aligns with the observed data.
+
+Given the presence of extreme negative values and the overall irregularity in the signal, it is likely indicative of neuropathy, where nerve damage leads to abnormal muscle activation patterns.
+
+Based on this analysis, the most appropriate classification for the subject type based on the EMG time series is:
+
+The answer is [C] || 2025-11-13 17:48:33
+[INFO] Line 40: False	 | To determine the subject type based on the provided EMG time series, we need to analyze the characteristics of the signal. 
+
+1. **Signal Amplitude**: The values in the time series fluctuate between positive and negative values, indicating muscle activity. The presence of both high and low values suggests variability in muscle activation.
+
+2. **Mean and Variance**: The mean of the signal appears to be around zero, with fluctuations indicating periods of muscle activation and relaxation. The variance seems to be relatively high, which could indicate muscle fatigue or abnormal muscle activation patterns.
+
+3. **Patterns of Activation**: The time series shows a pattern of peaks and troughs, which can be indicative of muscle recruitment patterns. The presence of significant negative values suggests potential issues with muscle function.
+
+4. **Comparison with Subject Types**:
+   - **Healthy (normal)**: Typically shows consistent and predictable patterns of muscle activation with less variability.
+   - **Myopathy**: Often presents with reduced amplitude and more irregular patterns due to muscle fiber damage.
+   - **Neuropathy**: Can show irregular patterns, with both high and low amplitudes, indicating issues with nerve conduction and muscle activation.
+
+Given the presence of significant fluctuations, including both high and low values, and the overall pattern of the time series, it suggests that the subject may have issues related to muscle activation that are more characteristic of neuropathy rather than healthy muscle function or myopathy.
+
+Therefore, based on the analysis of the EMG time series, the most appropriate classification for the subject type is:
+
+The answer is [C] || 2025-11-13 17:48:33
+[INFO] Line 41: False	 | To determine the subject type based on the provided EMG time series, we need to analyze the characteristics of the signal. 
+
+1. **Signal Amplitude**: The time series shows a mix of positive and negative values, indicating muscle activity. The presence of large negative values (e.g., -2.5099685192108154) suggests significant muscle activity or potential muscle fatigue.
+
+2. **Variability**: The time series exhibits fluctuations with both high peaks and deep troughs, which can indicate irregular muscle activation patterns. This variability can be indicative of neuropathic conditions.
+
+3. **Trends**: The presence of large negative values and the overall pattern of the signal suggest that the muscle may not be functioning normally. In healthy individuals, we would expect more consistent and less extreme fluctuations.
+
+4. **Comparison with Subject Types**:
+   - **Healthy (normal)**: Typically shows consistent and moderate amplitude with less variability.
+   - **Myopathy**: May show some irregularities but often presents with a different pattern of muscle activation.
+   - **Neuropathy**: Often characterized by irregular firing patterns, significant fluctuations, and potential for extreme values, which aligns with the observed data.
+
+Given the characteristics of the EMG time series, particularly the presence of extreme negative values and the overall irregularity in the signal, it is reasonable to classify this subject as having a neuropathic condition.
+
+The answer is [C] || 2025-11-13 17:48:33
+[INFO] Line 42: True	 | To determine the subject type based on the provided EMG time series, we need to analyze the characteristics of the signal. 
+
+1. **Signal Amplitude**: The values in the time series show a range of positive and negative values, indicating muscle activity. The presence of both high and low values suggests variability in muscle activation.
+
+2. **Mean Absolute Value (MAV)**: The MAV can be calculated to assess the overall muscle activation. The values seem to fluctuate, which may indicate a level of muscle fatigue or abnormal muscle activation patterns.
+
+3. **Variance and RMS**: The variance and root mean square (RMS) values can provide insights into the power of the signal. A high variance may indicate irregular muscle activity, which is often seen in myopathy or neuropathy.
+
+4. **Zero Crossing Rate (ZCR)**: The ZCR can help assess the frequency of muscle fiber recruitment. A low ZCR may indicate reduced muscle fiber recruitment, which can be a sign of neuropathy.
+
+5. **Frequency Domain Analysis**: Analyzing the frequency components of the signal can help identify patterns associated with different muscle conditions. For instance, a shift in median frequency (MDF) or mean frequency (MNF) can indicate muscle fatigue or changes in muscle fiber composition.
+
+Given the presence of both high and low values, along with the potential for irregular patterns, the EMG signal suggests that the subject may have a neuromuscular condition. The presence of significant negative values and the overall variability in the signal could indicate neuropathy, where the nerve signals to the muscles are impaired.
+
+Based on these observations, the most likely classification for the subject type is:
+
+The answer is [C] || 2025-11-13 17:48:33
+[INFO] Line 43: True	 | To determine the subject type based on the provided EMG time series, we need to analyze the characteristics of the signal. 
+
+1. **Signal Amplitude**: The values in the time series show a range of fluctuations, with some values being negative, indicating potential muscle inactivity or dysfunction. The presence of both positive and negative values suggests that there may be issues with muscle activation.
+
+2. **Trends and Patterns**: The time series shows a significant number of low amplitude values interspersed with higher peaks. This could indicate a lack of consistent muscle activation, which is often seen in conditions like myopathy or neuropathy.
+
+3. **Negative Values**: The presence of negative values, especially those that are significantly low (e.g., -10.582926750183105), suggests that there may be severe muscle dysfunction or nerve damage, which is characteristic of neuropathy.
+
+4. **Overall Signal Behavior**: The signal shows a pattern of low activity with occasional spikes, which is not typical for a healthy muscle. Healthy muscles typically show consistent activation patterns with less variability in amplitude.
+
+Based on these observations, the EMG time series indicates that the subject is likely experiencing issues related to muscle or nerve function, leaning towards neuropathy due to the significant negative values and the overall pattern of the signal.
+
+Thus, the final answer is: The answer is [C]. || 2025-11-13 17:48:33
+[INFO] Line 44: False	 | To determine the subject type based on the provided EMG time series, we need to analyze the characteristics of the signal. 
+
+1. **Signal Amplitude**: The values in the time series fluctuate between negative and positive values, indicating some level of muscle activity. However, the overall amplitude appears to be relatively low, suggesting that the muscle activation is not very strong.
+
+2. **Patterns of Activation**: The time series shows a pattern of small fluctuations with some peaks and troughs. The presence of negative values indicates periods of inactivity or reduced muscle activation. 
+
+3. **Comparison with Subject Types**:
+   - **Healthy (normal)**: Typically, a healthy EMG signal would show a higher amplitude and more consistent activation patterns, reflecting normal muscle function.
+   - **Myopathy**: This condition often presents with reduced amplitude and altered firing patterns due to muscle fiber damage. The fluctuations in the provided signal could suggest some level of myopathy, especially if the amplitude is consistently low.
+   - **Neuropathy**: Neuropathy can lead to irregular firing patterns and may show more significant fluctuations in the signal, often with a mix of high and low amplitude spikes.
+
+Given the characteristics of the provided EMG time series, the low amplitude and the presence of negative values suggest that the subject may have some form of muscle dysfunction, likely indicative of myopathy.
+
+Therefore, based on the analysis, the most appropriate classification for the subject type is:
+
+The answer is [B] || 2025-11-13 17:48:33
+[INFO] Line 45: True	 | To determine the subject type based on the provided EMG time series, we need to analyze the characteristics of the signal. 
+
+1. **Signal Amplitude**: The time series shows a mix of positive and negative values, indicating muscle activity. The presence of both high and low values suggests variability in muscle activation.
+
+2. **Trends and Patterns**: The time series has sections where the values fluctuate significantly, indicating potential muscle fatigue or abnormal muscle activation patterns. For instance, the presence of large negative values (e.g., -2.695017099380493) suggests possible muscle dysfunction.
+
+3. **Signal Characteristics**: The signal shows a pattern of alternating high and low values, which can be indicative of neuropathic conditions where nerve signals are not transmitted effectively, leading to irregular muscle activation.
+
+4. **Comparison with Subject Types**:
+   - **Healthy (normal)**: Typically, a healthy EMG signal would show consistent and expected patterns of muscle activation without extreme fluctuations.
+   - **Myopathy**: This condition often presents with reduced amplitude and more consistent low values, indicating muscle weakness.
+   - **Neuropathy**: This condition can show irregular patterns and fluctuations in the EMG signal, as seen in the provided data.
+
+Given the significant fluctuations, the presence of extreme negative values, and the overall irregularity in the signal, it is reasonable to conclude that the subject type is likely indicative of neuropathy.
+
+Thus, the final answer is: The answer is [C] || 2025-11-13 17:48:33
+[INFO] Line 46: True	 | To determine the subject type based on the provided EMG time series, we need to analyze the characteristics of the signal. 
+
+1. **Signal Amplitude**: The time series shows a mix of positive and negative values, indicating muscle activity. The presence of both high and low values suggests variability in muscle activation.
+
+2. **Trends and Patterns**: The time series exhibits fluctuations with some peaks and troughs. The presence of large negative values (e.g., -2.70393967628479) indicates potential muscle fatigue or abnormal muscle activity, which is often seen in conditions like myopathy or neuropathy.
+
+3. **Signal Characteristics**: The signal shows a pattern of alternating high and low values, which can indicate irregular muscle firing patterns. This is often associated with neuropathic conditions where nerve signals are disrupted.
+
+4. **Comparison with Subject Types**:
+   - **Healthy (normal)**: Typically, a healthy EMG would show consistent and well-defined patterns of muscle activation without extreme fluctuations.
+   - **Myopathy**: This condition often presents with reduced amplitude and more consistent low-level activity due to muscle fiber damage.
+   - **Neuropathy**: This condition can show irregular firing patterns and significant fluctuations in amplitude, which aligns with the observed data.
+
+Given the presence of significant fluctuations, high negative values, and irregular patterns, the EMG time series is more indicative of neuropathy rather than a healthy or myopathic condition.
+
+Therefore, the conclusion is that the subject type is likely to be neuropathic.
+
+The answer is [C] || 2025-11-13 17:48:33
+[INFO] ✅ Finished. Results saved → ./Classification/data/sample_generations/emg/text-only-prompting/spectrogram/norm/ts/0-shot_random_per_class_text-only_spectrogram_norm_ts.jsonl || 2025-11-13 17:48:33

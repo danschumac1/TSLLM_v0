@@ -25,10 +25,10 @@ where `label` is numeric and values are whitespace-separated floats.
 Outputs
 -------
 OUT_DIR/
-  X_train.npy : float32, shape (N_train, 319)
-  y_train.npy : int64,   shape (N_train,)
-  X_test.npy  : float32, shape (N_test,  319)
-  y_test.npy  : int64,   shape (N_test,)
+    X_train.npy : float32, shape (N_train, 1, 319)
+    y_train.npy : int64,   shape (N_train,)
+    X_test.npy  : float32, shape (N_test,  1, 319)
+    y_test.npy  : int64,   shape (N_test,)
 
 Run
 ---
@@ -42,7 +42,8 @@ import numpy as np
 # CONFIG
 # ---------------------------------------------------------------------
 BASE_PATH  = "raw_data/tee"
-OUT_DIR    = "Classification/data/tee"
+OUT_DIR    = "Classification/data/datasets/tee"
+SAMP_DIR   = "./Classification/data/samples/tee/"
 SERIES_LEN = 319  # expected time series length
 DTYPE_X    = np.float32
 DTYPE_Y    = np.int64
@@ -86,6 +87,16 @@ def read_txt_file(file_path: str):
     y = np.asarray(y_list, dtype=DTYPE_Y)
     return X, y
 
+def to_nyz(X: np.ndarray) -> np.ndarray:
+    """Force (N, Y, Z). If (N, Z) -> (N, 1, Z)."""
+    X = np.asarray(X)
+    if X.ndim == 2:
+        N, Z = X.shape
+        return X.reshape(N, 1, Z)
+    if X.ndim == 3:
+        return X
+    raise ValueError(f"Expected 2D or 3D, got {X.shape}")
+
 # ---------------------------------------------------------------------
 # MAIN
 # ---------------------------------------------------------------------
@@ -101,6 +112,11 @@ def main():
     assert X_train.shape[1] == SERIES_LEN, f"Train series length mismatch: {X_train.shape[1]}"
     assert X_test.shape[1]  == SERIES_LEN, f"Test series length mismatch: {X_test.shape[1]}"
     assert X_train.shape[0] > 0 and X_test.shape[0] > 0, "Empty split detected."
+    X_train = to_nyz(X_train)
+    X_test  = to_nyz(X_test)
+    assert X_train.ndim == 3 and X_train.shape[1] == 1 and X_train.shape[2] == SERIES_LEN
+    assert X_test.ndim  == 3 and X_test.shape[1]  == 1 and X_test.shape[2]  == SERIES_LEN
+
 
     print(f"Train shape: {X_train.shape}, Test shape: {X_test.shape}")
     print(f"Label distribution (train): { {int(k): int(v) for k, v in zip(*np.unique(y_train, return_counts=True))} }")
@@ -108,11 +124,21 @@ def main():
 
     # --- Save arrays ---
     print("Saving .npy files ...")
-    np.save(os.path.join(OUT_DIR, "X_train.npy"), X_train)
-    np.save(os.path.join(OUT_DIR, "y_train.npy"), y_train)
-    np.save(os.path.join(OUT_DIR, "X_test.npy"),  X_test)
-    np.save(os.path.join(OUT_DIR, "y_test.npy"),  y_test)
-
+    np.save(os.path.join(OUT_DIR, "X_train.npy"), X_train.astype(DTYPE_X, copy=False))
+    np.save(os.path.join(OUT_DIR, "y_train.npy"), y_train.astype(DTYPE_Y, copy=False))
+    np.save(os.path.join(OUT_DIR, "X_test.npy"),  X_test.astype(DTYPE_X,  copy=False))
+    np.save(os.path.join(OUT_DIR, "y_test.npy"),  y_test.astype(DTYPE_Y,  copy=False))
+    
+    os.makedirs(SAMP_DIR, exist_ok=True)
+    # sample
+    X_tr_samp = np.random.permutation(X_train)[:500]
+    y_tr_samp = np.random.permutation(y_train)[:500]
+    X_te_samp = np.random.permutation(X_test)[:100]
+    y_te_samp = np.random.permutation(y_test)[:100]
+    np.save(os.path.join(SAMP_DIR, "X_train.npy"), X_tr_samp.astype(np.float32, copy=False))
+    np.save(os.path.join(SAMP_DIR, "y_train.npy"), y_tr_samp.astype(np.int64, copy=False))
+    np.save(os.path.join(SAMP_DIR, "X_test.npy"),  X_te_samp.astype(np.float32, copy=False))
+    np.save(os.path.join(SAMP_DIR, "y_test.npy"),  y_te_samp.astype(np.int64, copy=False)) 
     print("✅ Done. Saved to:", OUT_DIR)
 
 if __name__ == "__main__":

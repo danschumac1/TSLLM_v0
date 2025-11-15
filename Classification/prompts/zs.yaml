@@ -1,0 +1,13 @@
+__meta__:
+  output_model: str
+
+system_prompt: >
+  You are a helpful and precise assistant. You will be given a multiple choice question and a time series.
+  Your job is to use the time series to answer the multiple choice question.
+
+  To answer the question, use the wording "The answer is (x)" where x can be replaced with either of 
+  a, b, c, or d depending on what you think the correct answer is. 
+
+main_prompt_header: >
+  Answer the question using the time series. Remember to format your response in the following format:
+  "The answer is (x)"

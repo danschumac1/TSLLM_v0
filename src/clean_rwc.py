@@ -25,10 +25,10 @@ RAW_ROOT/
 Outputs
 -------
 OUT_DIR/
-  X_train.npy : float32, shape (N_train, 4000, 1)
-  y_train.npy : int64,   shape (N_train,)
-  X_test.npy  : float32, shape (N_test,  4000, 1)
-  y_test.npy  : int64,   shape (N_test,)
+    X_train.npy : float32, shape (N_train, 1, 4000)
+    y_train.npy : int64,   shape (N_train,)
+    X_test.npy  : float32, shape (N_test,  1, 4000)
+    y_test.npy  : int64,   shape (N_test,)
 
 Run
 ---
@@ -47,7 +47,8 @@ RAW_ROOT   = "raw_data/rwc"
 TRAIN_DIR  = os.path.join(RAW_ROOT, "train")      # AIFFs here
 TRAIN_CSV  = os.path.join(RAW_ROOT, "train.csv")  # filename,label
 
-OUT_DIR    = "./Classification/data/rwc"
+OUT_DIR    = "./Classification/data/datasets/rwc"
+SAMP_DIR   = "./Classification/data/samples/rwc/"
 TARGET_LEN = 4000
 DTYPE      = np.float32
 
@@ -271,9 +272,10 @@ def main() -> None:
 
     # Expand channel dim to (N, L, 1) for consistency with conv models
     if X_train.ndim == 2:
-        X_train = X_train[:, :, None]
+        X_train = X_train[:, None, :]
     if X_test.ndim == 2:
-        X_test = X_test[:, :, None]
+        X_test = X_test[:, None, :]
+
 
     # Optional: shuffle within splits for randomness
     if SHUFFLE_WITHIN_SPLITS:
@@ -282,9 +284,9 @@ def main() -> None:
         p = rng.permutation(len(y_test));  X_test,  y_test  = X_test[p],  y_test[p]
 
     # --- Assertions & summaries ---
-    assert X_train.ndim == 3 and X_train.shape[2] == 1, "Expected (N, 4000, 1) for train."
-    assert X_test.ndim  == 3 and X_test.shape[2]  == 1, "Expected (N, 4000, 1) for test."
-    assert X_train.shape[1] == TARGET_LEN and X_test.shape[1] == TARGET_LEN, "Length mismatch."
+    assert X_train.ndim == 3 and X_train.shape[1] == 1 and X_train.shape[2] == TARGET_LEN, "Expected (N, 1, 4000) for train."
+    assert X_test.ndim  == 3 and X_test.shape[1]  == 1 and X_test.shape[2]  == TARGET_LEN, "Expected (N, 1, 4000) for test."
+    assert X_train.shape[2] == TARGET_LEN and X_test.shape[2] == TARGET_LEN, "Length mismatch."
 
     summarize("TRAIN", X_train, y_train)
     summarize("TEST",  X_test,  y_test)
@@ -295,6 +297,17 @@ def main() -> None:
     np.save(os.path.join(OUT_DIR, "y_train.npy"), y_train)
     np.save(os.path.join(OUT_DIR, "X_test.npy"),  X_test)
     np.save(os.path.join(OUT_DIR, "y_test.npy"),  y_test)
+
+    # sample
+    os.makedirs(SAMP_DIR, exist_ok=True)
+    X_tr_samp = np.random.permutation(X_train)[:500]
+    y_tr_samp = np.random.permutation(y_train)[:500]
+    X_te_samp = np.random.permutation(X_test)[:100]
+    y_te_samp = np.random.permutation(y_test)[:100]
+    np.save(os.path.join(SAMP_DIR, "X_train.npy"), X_tr_samp.astype(np.float32, copy=False))
+    np.save(os.path.join(SAMP_DIR, "X_test.npy"),  X_te_samp.astype(np.float32, copy=False))
+    np.save(os.path.join(SAMP_DIR, "y_train.npy"), y_tr_samp.astype(np.int64, copy=False))
+    np.save(os.path.join(SAMP_DIR, "y_test.npy"),  y_te_samp.astype(np.int64, copy=False))
 
     print("✅ Saved to", OUT_DIR)
 

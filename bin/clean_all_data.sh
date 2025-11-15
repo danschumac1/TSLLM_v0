@@ -14,15 +14,14 @@
 # - Stops immediately if any script fails (set -e)
 # ------------------------------------------------------------------------------
 
-set -e  # stop on first error
-set -o pipefail
+set -euo pipefail
 
 SRC_DIR="./src"
 LOG_DIR="./logs"
 
 mkdir -p "$LOG_DIR"
 
-declare -a datasets=(
+datasets=(
   "cpu"
   "ecg"
   "emg"
@@ -38,10 +37,20 @@ echo "=============================================="
 for ds in "${datasets[@]}"; do
   echo ""
   echo "➡️  Cleaning ${ds^^} ..."
-  python "${SRC_DIR}/clean_${ds}.py" \
-    >"${LOG_DIR}/clean_${ds}.log" 2>&1 \
-    && echo "✅ ${ds^^} done." \
-    || { echo "❌ ${ds^^} failed! Check ${LOG_DIR}/clean_${ds}.log"; exit 1; }
+
+  # Initial cleaning
+  # python "${SRC_DIR}/clean_${ds}.py" \
+  #   > "${LOG_DIR}/clean_${ds}.log" 2>&1 \
+  #   && echo "✅ initial cleaning for ${ds^^} done." \
+  #   || { echo "❌ initial cleaning for ${ds^^} failed! Check ${LOG_DIR}/clean_${ds}.log"; exit 1; }
+
+  # Enrichment / preprocessing
+  python "${SRC_DIR}/enrich_data.py" \
+    --dataset "$ds" \
+    >> "${LOG_DIR}/clean_${ds}.log" 2>&1 \
+    && echo "✅ enriching ${ds^^} done." \
+    || { echo "❌ enriching ${ds^^} failed! Check ${LOG_DIR}/clean_${ds}.log"; exit 1; }
+
 done
 
 echo ""

@@ -42,7 +42,8 @@ import os
 import numpy as np
 
 RAW = "./raw_data/har"
-OUT = "./Classification/data/har"
+OUT = "./Classification/data/datasets/har"
+SAMP_DIR = "./Classification/data/samples/har/"
 DTYPE = np.float32
 SEED = 1337
 
@@ -90,6 +91,16 @@ def main():
     np.save(os.path.join(OUT, "X_test.npy"),  X_test)
     np.save(os.path.join(OUT, "y_test.npy"),  y_test)
 
+    # sample
+    os.makedirs(SAMP_DIR, exist_ok=True)
+    X_tr_samp = np.random.permutation(X_train)[:500]
+    y_tr_samp = np.random.permutation(y_train)[:500]
+    X_te_samp = np.random.permutation(X_test)[:100]
+    y_te_samp = np.random.permutation(y_test)[:100]
+    np.save(os.path.join(SAMP_DIR, "X_train.npy"), X_tr_samp.astype(np.float32, copy=False))
+    np.save(os.path.join(SAMP_DIR, "X_test.npy"),  X_te_samp.astype(np.float32, copy=False))
+    np.save(os.path.join(SAMP_DIR, "y_train.npy"), y_tr_samp.astype(np.int64, copy=False))
+    np.save(os.path.join(SAMP_DIR, "y_test.npy"),  y_te_samp.astype(np.int64, copy=False))
 
     print("✅ Saved to", OUT)
 

@@ -56,6 +56,8 @@ from scipy.io import loadmat
 
 
 CLS2IDX = {"N": 0, "A": 1, "O": 2, "~": 3}
+OUT_DIR = "./Classification/data/datasets/ecg/"              # Where to write npy files
+SAMP_DIR = "./Classification/data/samples/ecg/"
 
 def load_reference_csv(reference_csv_path: str) -> dict:
     """
@@ -232,11 +234,22 @@ if __name__ == "__main__":
 
 
     # Save arrays to disk
-    os.makedirs("./Classification/data/ecg/", exist_ok=True)
-    np.save("./Classification/data/ecg/X_train.npy", X_train)
-    np.save("./Classification/data/ecg/y_train.npy", y_train)
-    np.save("./Classification/data/ecg/X_test.npy", X_test)
-    np.save("./Classification/data/ecg/y_test.npy", y_test)
+    os.makedirs(OUT_DIR, exist_ok=True)
+    np.save(OUT_DIR, X_train)
+    np.save(OUT_DIR, y_train)
+    np.save(OUT_DIR, X_test)
+    np.save(OUT_DIR, y_test)
+
+    os.makedirs(SAMP_DIR, exist_ok=True)
+    # sample
+    X_tr_samp = np.random.permutation(X_train)[:500]
+    y_tr_samp = np.random.permutation(y_train)[:500]
+    X_te_samp = np.random.permutation(X_test)[:100]
+    y_te_samp = np.random.permutation(y_test)[:100]
+    np.save(os.path.join(SAMP_DIR, "X_train.npy"), X_tr_samp.astype(np.float32, copy=False))
+    np.save(os.path.join(SAMP_DIR, "y_train.npy"), y_tr_samp.astype(np.int64, copy=False))
+    np.save(os.path.join(SAMP_DIR, "X_test.npy"),  X_te_samp.astype(np.float32, copy=False))
+    np.save(os.path.join(SAMP_DIR, "y_test.npy"),  y_te_samp.astype(np.int64, copy=False))
 
     print(f"Expected total ~ 43673 | actual={len(y_train) + len(y_test)}")
     print("\nSAVED FILES SUCCESSSFULLY  |  ./Classification/data/ecg/")
